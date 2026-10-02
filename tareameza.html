@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- JAIME OMAR MORALES REYNOSO 5J NUM DE CONTROL 0877-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semáforo TRIAGE Urgencias</title>
+  
+  <style>
+    /* Estilos base del documento */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      background-color: #f4f4f4;
+      margin: 0;
+    }
+
+    .container {
+      background: white;
+      padding: 30px 40px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Encabezado */
+    .header {
+      position: relative;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .title {
+      margin: 0;
+      line-height: 1;
+    }
+
+    .title .semaforo {
+      font-size: 32px;
+      color: #0d2366;
+      font-weight: bold;
+    }
+
+    .title .triage {
+      font-size: 54px;
+      color: #0d2366;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    /* Tabla de contenido */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    th {
+      font-size: 11px;
+      font-weight: bold;
+      color: #0d2366;
+      padding: 6px 10px;
+      background: #eef2f9;
+      border-radius: 12px;
+      margin: 0 4px;
+    }
+
+    td {
+      padding: 18px 5px;
+      font-size: 13px;
+      vertical-align: middle;
+    }
+
+    /* Formato específico de la columna "Tipo de atención" */
+    .tipo {
+      font-weight: bold;
+      font-style: italic;
+      font-size: 16px;
+    }
+
+    /* Formato de las demás columnas (Texto normal) */
+    .normal {
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    /* Colores por nivel de urgencia */
+    .c-reanimacion { color: #e60000; }
+    .c-emergencia  { color: #e65c00; }
+    .c-urgencia    { color: #d4a000; }
+    .c-menor       { color: #009933; }
+    .c-sin         { color: #0044cc; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Encabezado con título -->
+    <div class="header">
+      <div class="title">
+        <span class="semaforo">Semáforo</span> 
+        <span class="triage">TRIAGE</span>
+      </div>
+    </div>
+
+    <!-- Tabla con las 3 columnas principales -->
+    <table>
+      <thead>
+        <tr>
+          <th>Tipo de atención</th>
+          <th>Área de atención</th>
+          <th>Tiempo de espera</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Fila 1: Reanimación (Rojo) -->
+        <tr>
+          <td class="tipo c-reanimacion">Reanimación</td>
+          <td class="normal c-reanimacion">Área de<br>reanimación</td>
+          <td class="normal c-reanimacion">Inmediato<br>hasta 3 min</td>
+        </tr>
+
+        <!-- Fila 2: Emergencia (Naranja) -->
+        <tr>
+          <td class="tipo c-emergencia">Emergencia</td>
+          <td class="normal c-emergencia">Área de<br>reanimación</td>
+          <td class="normal c-emergencia">Inmediato<br>hasta 10 min</td>
+        </tr>
+
+        <!-- Fila 3: Urgencia (Amarillo) -->
+        <tr>
+          <td class="tipo c-urgencia">Urgencia</td>
+          <td class="normal c-urgencia">Consultorio de<br>primer contacto</td>
+          <td class="normal c-urgencia">Hasta 30 min</td>
+        </tr>
+
+        <!-- Fila 4: Urgencia menor (Verde) -->
+        <tr>
+          <td class="tipo c-menor">Urgencia<br>menor</td>
+          <td class="normal c-menor">Consultorio de<br>primer contacto<br>o UMF</td>
+          <td class="normal c-menor">Hasta 120 min</td>
+        </tr>
+
+        <!-- Fila 5: Sin urgencia (Azul) -->
+        <tr>
+          <td class="tipo c-sin">Sin<br>urgencia</td>
+          <td class="normal c-sin">Consultorio de<br>primer contacto<br>o UMF</td>
+          <td class="normal c-sin">Hasta 180 min</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</body>
+</html>
